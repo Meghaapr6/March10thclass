@@ -1,0 +1,12 @@
+153  yum install java-1.8.0-openjdk-devel
+  154  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  155  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+  156  yum install epel-release
+  157  sudo amazon-linux-extras install epel
+  158  cear
+  159  clear
+  160  yum install jenkins
+  161  clear
+  162  systemctl status jenkins
+  163  systemctl start jenkins
+  164  cat /var/lib/jenkins/secrets/initialAdminPassword
