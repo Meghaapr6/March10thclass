@@ -1,0 +1,82 @@
+Scneario1:
+
+Pull an Image from docker hub in your docker host (local)
+
+
+Name of the Image:  
+
+ Imagename:tagname
+ 
+eg: docker pull ubuntu:18.04
+
+    docker pull ubuntu:20
+
+   docker pull ubuntu
+
+
+Scenario 2:
+
+List the images in your local machine
+
+docker images
+
+or
+
+docker image ls
+
+
+
+Scneario 3:
+
+Delete an image form local
+
+$ docker rmi tomcat:9
+
+
+Scneario 4:
+
+************
+
+Containers:
+
+Docker ps -a ==> list all containers in the docker host
+
+$ docker run ubuntu
+
+ ==> create a container in exited
+
+Create a container which is running
+
+
+==> Foreground mode 
+
+  -it : container will be created and will be running and user will be attached to the terminal of the container
+
+
+comeout of container
+
+press ctl p + ctl q ==> user will out of the container and container will up and running
+
+
+exit ==>user will out of the container but container will stop
+
+
+docker attach u1 ==> attache to the terminal of container again
+
+
+==> background mode
+
+-d ==> container will be created and user will not be on the container
+
+container is runnign in the backgroud
+
+
+
+
+
+
+
+
+
+
+
