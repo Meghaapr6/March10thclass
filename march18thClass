@@ -31,6 +31,32 @@ EOT
 sudo docker build -t myaddr:v1 .
 sudo docker run -d -P myaddr:v1
 
+====================================================================21/03/2022
+
+
+09:12 PM: $ docker swarm init
+
+generate a token
+ 
+docker swarm join --token SWMTKN-1-1r0ipp4rscalm7rfcc2ecroze7vhfmeo3xopz1tz5nqpeb7mcn-3xoeyp17udt5d06vnkkqo4ad9 172.31.20.177:237
+
+Take the token and copy on the worker machines for them to join the cluster
+
+$ docker node ls
+
+list the nodes in your cluster
+
+Generate worker token
+
+$ docker swarm join-token worker
+
+
+=========================================================
+>to create the service 
+
+docker service create --name mysvc --replicas 3 -p 8282:80 nginx
+> 
+
 
 
 
