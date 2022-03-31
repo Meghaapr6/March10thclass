@@ -39,3 +39,40 @@ hosts: webserver
     command: chdir={{dest_path}} docker build -t {{image_name}} .
   - name: run the image to create a container
     command: docker run -d -P {{image_name}}
+
+
+
+31/03/2022
+
+===================================
+
+
+How to write a playbook
+
+- host: webserver
+
+if we want to beacome a different user to execute our task:
+
+ become: true
+ become_user: root
+
+
+To execute multiple tasks in the playbook:
+
+tasks:
+- name: 
+  module_name: par1=value par2=val
+
+if we want a module to executed again and again for certain item_values
+
+loop
+
+if we want to pass value to parameter using a variable, how do you define a varibale in ansible playbook
+
+ {{varaible_name}}
+
+where do you define the variable
+
+vars:
+
+
