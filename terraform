@@ -1,0 +1,21 @@
+resource "aws_instance" "myec2" {
+  ami           = "ami-00ee4df451840fa9d"
+  instance_type = "t2.micro"
+  key_name = "01Apr"
+  tags = {
+    Name = "Terraform1"
+  }
+
+  provisioner "remote-exec" {
+   inline = [
+   "sudo amazon-linux-extras install -y nginx1.12",
+   "sudo systemctl start nginx"
+   ]
+  connection {
+  type     = "ssh"
+  user     = "ec2-user"
+  private_key = file("./01Apr.pem")
+  host     = self.public_ip
+}
+ }
+}
